@@ -1,0 +1,22 @@
+name: INE
+channels:
+    - intel
+    - conda-forge
+dependencies:
+    - python=3.8
+    - pandas=1
+    - pip
+    - numpy
+    - jupyter
+    - jupyterlab
+    - rise
+    - matplotlib
+    - xlrd
+    - requests
+    - sqlalchemy
+    - h5py
+    - psycopg2
+    - pytables
+    - lxml
+    - pip:
+        - csvkit
