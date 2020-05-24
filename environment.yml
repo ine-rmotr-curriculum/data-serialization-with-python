@@ -18,5 +18,6 @@ dependencies:
     - psycopg2
     - pytables
     - lxml
+    - jsonpickle
     - pip:
         - csvkit
