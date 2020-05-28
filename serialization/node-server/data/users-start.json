@@ -1,0 +1,18 @@
+{
+  "1": {
+    "name": "Guido van Rossum",
+    "password": "unladenswallow",
+    "profession": "ex-BDFL"
+  },
+  "2": {
+    "name": "Brendan Eich",
+    "password": "nontransitiveequality",
+    "profession": "Mozillan"
+  },
+  "3": {
+    "name": "Ken Thompson",
+    "password": "p/q2-q4!",
+    "profession": "Unix Creator"
+  }
+}
+
