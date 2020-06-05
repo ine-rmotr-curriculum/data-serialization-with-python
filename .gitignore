@@ -1,5 +1,6 @@
 # Temporary data
 **/tmp/*
+**/data/movies.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
