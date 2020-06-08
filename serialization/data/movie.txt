@@ -1,0 +1,5 @@
+Name|Rating|Age
+"Mia
+Johnson"|9.5|25
+Liam Lopez||35
+"Isabella ""Bella"" Lee"|8.0|45
