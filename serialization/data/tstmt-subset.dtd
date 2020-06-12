@@ -1,0 +1,23 @@
+<!-- DTD for testaments    J. Bosak -->
+<!-- Early versions 1992-1998 -->
+<!-- Major revision Copyright (c) Jon Bosak September 1998 -->
+<!-- Subset by David Mertz 2020 -->
+
+<!ENTITY % plaintext "#PCDATA|i">
+
+<!ELEMENT tstmt     (coverpg?,titlepg?,preface?,suracoll+)>
+<!ELEMENT coverpg   ((title|title2)+, (subtitle|p)*)>
+<!ELEMENT titlepg   ((title|title2)+, (subtitle|p)*)>
+<!ELEMENT title     (%plaintext;)*>
+<!ELEMENT title2    (%plaintext;)*>
+<!ELEMENT subtitle  (p)+>
+<!ELEMENT preface   ((ptitle|ptitle0)+, p+>
+<!ELEMENT ptitle    (%plaintext;)*>
+<!ELEMENT suracoll  (sura+)>
+<!ELEMENT sura      (bktlong, bktshort, epigraph?, v+)>
+<!ELEMENT bktlong   (%plaintext;)*>
+<!ELEMENT bktshort  (%plaintext;)*>
+<!ELEMENT epigraph  (%plaintext;)*>
+<!ELEMENT p         (%plaintext;)*>
+<!ELEMENT v         (%plaintext;)*>
+<!ELEMENT i         (%plaintext;)*>

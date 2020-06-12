@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>religion.200</title>
+</head>
+
+<body>
+<h1>Religion 2.00</h1>
+
+<h2>Jon Bosak (bosak@eng.sun.com)<br>October 6, 1998</h2>
+
+<p>This is religion.200, a group of four religious works marked up for
+electronic publication from publicly available sources.  The texts
+were originally marked up (1992) as an exercise in SGML DTD and style
+sheet design, and in 1996 were released along with a companion
+Shakespeare set as the earliest examples of real documents marked up
+in XML.  The current distribution conforms to the XML 1.0
+Recommendation released February 8, 1998.</p>
+
+<h3>Copyright</h3>
+
+<p>It has been my intention from the beginning that this set should
+always be made available as a set rather than as individual works.
+Each of the four "testaments" in the set now bears the following
+notices:
+
+<blockquote>
+SGML version by Jon Bosak, 1992-1994<br>
+XML version by Jon Bosak, 1996-1998<br>
+The XML markup and added material in this version are
+Copyright &#169; 1998 Jon Bosak
+</blockquote>
+
+<blockquote>
+The set of which this work is a part may freely be distributed on
+condition that it not be modified or altered in any way.  The
+individual works making up the set -- <i>The Old Testament, The
+New Testament, The Quran,</i> and <i>The Book of Mormon</i> --
+cannot be distributed separately without violating the terms under
+which the set is made available.
+</blockquote>
+
+<h3>What's new</h3>
+
+<p>Version 2.00 differs significantly from the previous release,
+version 1.10.  Some new material has been added, and the markup and
+associated DTD have been substantially revised.</p>
+
+<p>The most important change is the removal of verse numbers.  The
+previous markup was designed simply to delimit the original ASCII
+texts I started with in 1992.  This new version is intended to
+exercise the ability of style sheets to supply basic features such as
+generated numbers and tables of contents.  Since the particular texts
+making up the set are taken as canonical and unchanging, verse numbers
+and tables of contents can be generated, so there is no need to
+include them in the markup.  DSSSL stylesheets are included with the
+texts themselves to demonstrate the concept.  Supporting files needed
+to generate RTF output using the style sheets in conjunction with the
+Jade DSSSL engine are also provided.</p>
+
+<h3>Manifest</h3>
+
+<p>This distribution includes the following files and directories:</p>
+
+<pre>
+   religion.htm  this file
+
+   vs            a bash script for validating a file as SGML
+   vx            a bash script for validating a file as XML
+
+   rtfn          a bash script for generating a normal RTF file
+   rtfl          a bash script for generating a large-type RTF file
+
+   buildall      a bash script for validating all of the XML files in
+                 the set and building both RTF versions of each file
+
+   common        directory containing all the style-sheet files, etc.:
+      catalog         SGML Open (OASIS) catalog for public identifiers
+      base.dsl        the parts common to all of the style sheets
+      p1.dsl          wrapper file for the one-level style sheet
+      t1.dsl          parts peculiar to the one-level style sheet
+      p2.dsl          wrapper file for the two-level style sheet
+      t2.dsl          parts peculiar to the two-level style sheet
+      tstmt.dtd       DTD for testaments
+      dsssl.dtd       DSSSL DTD
+      fot.dtd         FOT (flow object tree) DTD
+      style-sheet.dtd DTD for DSSSL style sheets
+      xml.dcl         XML SGML declaration
+      xml.soc         XML catalog
+
+   bom
+      bom.xml    The Book of Mormon
+   nt
+      nt.xml     The New Testament (KJV)
+   ot
+      ot.xml     The Old Testament (KJV)
+   quran
+      quran.xml  The Quran (trans. by M. H. Shakir)
+</pre>
+
+<h3>Running the scripts</h3>
+
+<p>The files in this set were built and tested in Windows 95 using
+scripts running under the Gnu bash shell.  They should work equally
+well using DOS batch files, but I don't have the patience to deal with
+them.  The same installation has also been tested under Solaris (using
+ksh instead of bash) and should work with other versions of Unix as
+well.</p>
+
+<p>Assuming that nsgmls (part of the Jade distribution) has been
+installed and is in the search path, the scripts named vs and vx are
+called from the parent directory like this:</p>
+
+<pre>
+   vs ot
+   vx ot
+</pre>
+
+<p>In these examples, the vs script performs a validity check of the
+ot/ot.xml file as an SGML file, and the vx script performs a validity
+check of the same file as an XML file.  Note that both scripts change
+the values of SP environment variables.</p>
+
+<p>Assuming that Jade (http://www.jclark.com/jade) has been installed
+and is in the search path, the scripts named rtfn and rtfl are called
+from the parent directory like this:</p>
+
+<pre>
+   rtfn nt 2
+   rtfl quran 1
+</pre>
+
+<p>In these examples, the rtfn script calls jade using the style sheet
+for two-level testaments to produce a normal-type RTF version of
+nt/nt.xml, and the rtfl script calls jade using the style sheet for
+one-level testaments to produce a large-type RTF version of
+quran/quran.xml.  A one-level testament such as the Quran has just one
+level of containment (the sura) above the verse level.  Two-level
+testaments such as the Old Testament and the New Testament have two
+levels of containment (books and chapters) above the verse level.
+Note that the Book of Mormon contains both chapters and suras.</p>
+
+<p>The buildall script calls vs, vx, rtfn, and rtfl to validate and
+make both RTF versions of all four XML files.</p>
+
+<h3>About the style sheets</h3>
+
+<p>The style sheets provided in this distribution produce results that
+leave a lot to be desired, especially in the areas of column-balancing
+and TOC formatting.  This is due partly to limitations in RTF, partly
+to limitations in Jade, partly to limitations in my skill, and partly
+to a desire to keep them simple.  They are not intended as examples of
+fine quality typography but rather as demonstrations of basic concepts
+using freely available tools.  It is my intention to use these style
+sheets as the basis for explorations into XSL as that standard begins
+to solidify.</p>
+
+<address>Jon Bosak<br>Los Altos, California<br>October 1998</address>
+
+</body>
+</html>
