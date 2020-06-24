@@ -1,0 +1,10 @@
+Name|Price|Quantity
+/Wankle rotary engine/|555.55|527
+/Sousaphone w%/ stand/|333.33|123
+
+Feather Duster|22.22|900
+
+/Area 51 metal fragment/|9999.99|
+The kitchen sink|129.99|43
+
+/Steak knife/|12.49|1,000,000

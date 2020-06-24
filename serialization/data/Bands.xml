@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<bands>
+    <band>
+        <name>Pere Ubu</name>
+        <guitarists>
+            <item>Michele Temple</item>
+            <item>Keith Moliné</item>
+            <item>Peter Laughner</item>
+            <item>Tom Herman</item>
+            <item>Mayo Thompson</item>
+            <item>Jim Jones</item>
+            <item>Wayne Kramer</item>
+        </guitarists>
+        <numalbums>18</numalbums>
+        <formation>1975</formation>
+    </band>
+    <band>
+        <name>L7</name>
+        <guitarists>
+            <item>Suzi Gardner</item>
+            <item>Donita Sparks</item>
+        </guitarists>
+        <numalbums>7</numalbums>
+    </band>
+    <band>
+        <name>The Runaways</name>
+        <guitarists>
+            <item>Joan Jett</item>
+            <item>Lita Ford</item>
+        </guitarists>
+        <numalbums>4</numalbums>
+        <formation>1975</formation>
+    </band>
+</bands>

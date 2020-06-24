@@ -1,4 +1,4 @@
-# Customizing pickling
+# Universal Python Serialization
 
 This exercise has two parts.  
 
