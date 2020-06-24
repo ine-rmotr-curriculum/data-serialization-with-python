@@ -57,7 +57,8 @@ def test_archive():
 ## Solution
 
 ```python
-arr1 = np.random.randint(10, 51, 300_000, dtype=np.uint8).reshape(20, 30, 10, 50)
+arr1 = np.random.randint(10, 51, 300_000, \
+                         dtype=np.uint8).reshape(20, 30, 10, 50)
 arr2 = np.zeros(100, dtype=complex)
 arr3 = np.array(['Red', 'Green', 'Blue'])
 
