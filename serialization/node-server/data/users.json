@@ -2,36 +2,17 @@
   "1": {
     "name": "Guido van Rossum",
     "password": "unladenswallow",
-    "details": {
-      "profession": "ex-BDFL"
-    }
+    "details": {"profession": "ex-BDFL"}
   },
   "2": {
     "name": "Brendan Eich",
     "password": "nontransitiveequality",
-    "details": {
-      "profession": "Mozillan"
-    }
+    "details": {"profession": "Mozillan"}
   },
   "3": {
     "name": "Ken Thompson",
     "password": "p/q2-q4!",
-    "details": {
-      "profession": "Unix Creator"
-    }
-  },
-  "4": {
-    "name": "David Mertz",
-    "password": "badpassword",
-    "details": {
-      "profession": "Data Scientist",
-      "publisher": "INE"
-    },
-    "lucky_numbers": [
-      12,
-      42,
-      55,
-      87
-    ]
+    "details": {"profession": "Unix Creator"}
   }
 }
+
