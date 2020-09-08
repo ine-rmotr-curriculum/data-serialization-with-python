@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+
+from sys import stderr, stdin
+from collections import Counter
+import argparse
+import fileinput
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-v', '--verbose', action='store_true',
+                    help="Display output in 'pretty' format")
+parser.add_argument('-c', '--cite', action='store_true',
+                    help="Echo citation information to STDERR")
+parser.add_argument('files', nargs='*',
+                    help="Files to process (default to STDIN)")
+parser.add_argument('--limit', type=int, default=99,
+                    help="Do not process more than this number of files")
+args = parser.parse_args()
+
+lengths = list()
+for line in fileinput.input(args.files[:args.limit] or '-'):
+        if line.startswith('*** Source: '):
+            if args.cite:
+                print(line[12:].strip(), file=stderr)
+        else:
+            lengths.append(len(line))
+
+if args.verbose:
+    for length, num in Counter(lengths).most_common():
+        print(f"Length {length}: {num}")
+else:
+    print(Counter(lengths).most_common())
+

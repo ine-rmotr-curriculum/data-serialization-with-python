@@ -11,7 +11,7 @@ csv, zlib, gzip, zipfile, pickle, sqlite3
 
 ## Programming tools
 
-itertools, functools, operators, collections, dataclass
+itertools, functools, operator, collections, dataclass
 
 ## Writing scripts
 
