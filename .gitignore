@@ -1,6 +1,7 @@
 # Temporary data
 **/tmp/*
 tmp-*
+*.enc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
