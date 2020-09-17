@@ -1,0 +1,8 @@
+digraph embarrasing {
+    result -> "compute 1"
+    result -> "compute 2"
+    result -> "compute 3"
+    result -> "compute 4"
+    result -> "compute 5"
+    result -> "compute 6"
+}
