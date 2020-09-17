@@ -19,5 +19,6 @@ dependencies:
     - pytables
     - lxml
     - jsonpickle
+    - flask
     - pip:
         - csvkit
