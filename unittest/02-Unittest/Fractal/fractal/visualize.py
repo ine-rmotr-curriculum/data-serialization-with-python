@@ -2,6 +2,7 @@ import numpy as np
 from itertools import product
 import matplotlib.pyplot as plt
 
+
 def make_canvas(fn, x, y, size, pixels, kws={}):
     xspan, yspan = pixels, pixels
     canvas = np.empty(shape=(xspan, yspan), dtype=np.uint8)
@@ -13,6 +14,7 @@ def make_canvas(fn, x, y, size, pixels, kws={}):
         canvas[row, col] = escape
     return canvas
 
+
 def visualize(fn, x, y, size, pixels, kws={}):
     """Visualize an arbitrary function fn:ℂ🠖ℕ
     
@@ -23,7 +25,13 @@ def visualize(fn, x, y, size, pixels, kws={}):
     pixels: size of generated graph in pixels (square)
     """
     canvas = make_canvas(fn, x, y, size, pixels, kws)
+    display(canvas)
+    
+    
+def display(canvas):
+    "Display a 2-D array"
+    assert isinstance(canvas, np.ndarray) and canvas.ndim == 2
     fig, ax = plt.subplots(figsize=(8, 8))
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
-    ax.imshow(canvas);
+    ax.imshow(canvas)
