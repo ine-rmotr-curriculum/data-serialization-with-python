@@ -7,7 +7,7 @@ more details over every finite number of iterations.
 
     # Do we calculate escape for every point?
     >>> from random import random
-    >>> from mandelbrot1 import mandelbrot
+    >>> from mandelbrot3 import mandelbrot
     
     # We wish to try a large number of points
     >>> escapes = []
