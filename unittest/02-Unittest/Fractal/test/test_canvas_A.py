@@ -10,7 +10,7 @@ class TestCanvas(unittest.TestCase):
         self.base_canvas = make_canvas(self.simple_fn, 0, 0, 800, 800)
 
     def simple_fn(self, c):
-        return max(int(c.real), int(c.imag)) % 255
+        return max(int(c.real), int(c.imag)) % 256
 
     def test_canvas_size(self):
         for n in range(8):
@@ -21,8 +21,5 @@ class TestCanvas(unittest.TestCase):
                              msg=f"Unexpected canvas size {canvas.shape}")
     
     def tearDown(self):
-        # clean up resources here...
-        pass
-    
-#if __name__ == '__main__':
-#    unittest.main()
+        pass   # clean up resources here...
+        

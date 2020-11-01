@@ -27,7 +27,7 @@ def make_canvas(fn, x, y, size, pixels, kws={}):
 
 def visualize(canvas):
     "Visualize an arbitrary canvas of 8-bit unsigned ints"
-    fig, ax = plt.subplots(figsize=(8, 8))
+    fig, ax = plt.subplots(figsize=(7, 7))
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
     ax.imshow(canvas)
