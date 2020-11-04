@@ -20,5 +20,7 @@ dependencies:
     - lxml
     - jsonpickle
     - flask
+    - pytest
+    - pytest-xdist
     - pip:
         - csvkit

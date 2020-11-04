@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.2, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
+rootdir: /home/dmertz/git/INE/unittest/04-PyTest/Fractal-03
+plugins: xdist-2.1.0, forked-1.2.0
+collected 14 items
+
+Mandelbrot.md .                                                          [  7%]
+fractal/koch.py .                                                        [ 14%]
+fractal/mandelbrot.py .                                                  [ 21%]
+fractal/sierpiński.py .F                                                 [ 35%]
+test/test_canvas.py ....s..x                                             [ 92%]
+test/test_points.py F                                                    [100%]
+
+=================================== FAILURES ===================================
+_____________________ [doctest] fractal.sierpiński.gasket ______________________
+016     
+017     >>> pixels, N = 500, 6
+018     >>> canvas = gasket(pixels, N)
+019     >>> canvas.shape
+020     (500, 500)
+021     
+022     Each iteration adds 1/9th remaining points, but also increasing 
+023     values for them at each iteration. Check weak lower bound.
+024     
+025     >>> canvas.sum() >= (pixels**2)/9 * N
+Expected:
+    True
+Got:
+    False
+
+/home/dmertz/git/INE/unittest/04-PyTest/Fractal-03/fractal/sierpiński.py:25: DocTestFailure
+____________________________ TestRandom.test_random ____________________________
+
+self = <test.test_points.TestRandom testMethod=test_random>
+
+    def test_random(self):
+        seed(2)
+        for i in range(10):
+>           self.assertTrue(random() < 0.9, msg="Value exceeds bounds")
+E           AssertionError: False is not true : Value exceeds bounds
+
+test/test_points.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED fractal/sierpiński.py::fractal.sierpiński.gasket
+FAILED test/test_points.py::TestRandom::test_random - AssertionError: False i...
+============== 2 failed, 10 passed, 1 skipped, 1 xfailed in 8.13s ==============
