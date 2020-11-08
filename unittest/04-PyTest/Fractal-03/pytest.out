@@ -43,4 +43,4 @@ test/test_points.py:12: AssertionError
 =========================== short test summary info ============================
 FAILED fractal/sierpiński.py::fractal.sierpiński.gasket
 FAILED test/test_points.py::TestRandom::test_random - AssertionError: False i...
-============== 2 failed, 10 passed, 1 skipped, 1 xfailed in 8.13s ==============
+============== 2 failed, 10 passed, 1 skipped, 1 xfailed in 5.69s ==============

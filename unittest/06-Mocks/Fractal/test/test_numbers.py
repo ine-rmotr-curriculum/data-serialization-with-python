@@ -1,4 +1,5 @@
 import pytest
+from unittest.mock import MagicMock
 from pytest import param
 import numpy as np
 from server.number_server import make_server
@@ -101,4 +102,45 @@ def fixnum(request):
 @pytest.mark.parametrize("num", [param(7), param(8)])
 def test_param_product(fixnum, num):
     assert True
-    
+
+
+def test_server_API(monkeypatch):
+    server = make_server()
+    _command = server.command
+    monkeypatch.setattr(server, 'command', lambda cmd: None)
+    monkeypatch.setattr(server, 'get', lambda n: list(range(n)))
+    server.command('START PRIMES')
+    nums = server.get(1000)
+    # Loosely ascending order
+    assert max(nums[:100]) < max(nums[450:550]) < max(nums[-100:])
+    # This API internally calls `self.get()` on a server
+    assert server.get_one() == 0
+    _command('STOP')
+
+
+def test_server_API2():
+    class StubServer:
+        def command(self, cmd): pass
+        def get(self, n=1):
+            return list(range(n))
+        def get_one(self):
+            return self.get()[0]
+        
+    server = StubServer()
+    server.command('START PRIMES')
+    nums = server.get(1000)
+    assert len(nums) == 1000
+    assert max(nums[:100]) < max(nums[450:550]) < max(nums[-100:])
+    assert server.get_one() == 0
+
+
+def test_prime_jumps():
+    expected = iter([1, 2, 5, 19, 103, 733, 6691, 76831, 1081429])
+    server = make_server().command('START PRIMES')
+    server.get = MagicMock(wraps=server.get)
+    n = 1
+    while n < 1_000_000:
+        nums = server.get(n)
+        n = nums[-1]
+        server.get.assert_called_with(next(expected))
+    server.command('STOP')
