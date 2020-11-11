@@ -1,58 +1,53 @@
 import pytest
+import requests
 from utilities import *
-from pathlib import Path
+
+class JSONAnswer:
+    def __init__(self, data):
+        self.data = data
+        
+    def json(self):
+        return self.data
+
+def mock_get(url):
+    parts = url.split('/')
+    start, stop = map(int, parts[-2:])
+    primes = get_primes_upto(stop)
+    result = [n for n in primes if n >= start]
+    return JSONAnswer(result)
+        
+                          
+def test_exact_moderate_range(monkeypatch):
+    # Check for correct results for moderate result size
+    correct = [1_000_003, 1_000_033, 1_000_037,
+               1_000_039, 1_000_081, 1_000_099]
+    monkeypatch.setattr(requests, 'get', mock_get)
+    assert get_primes_between(1_000_000, 1_000_100) == correct
 
 
-@pytest.fixture(params=list(range(10)))
-def randoms_uint64(request):
-    # Do not actually use parameter, just want to test multiple
-    count = 10_000
-    fname = random_uint64_to_file(count=count)
-    yield fname, count
-    Path(fname).unlink()
+class JSONLen:
+    def __init__(self, len_):
+        self.len = len_
+        
+    def json(self):
+        class Len:
+            def __init__(self, len_):
+                self.len = len_
+            def __len__(self):
+                return self.len
+            
+        return Len(self.len)
 
-
-@pytest.fixture(scope="session", params=list(range(1, 6)))
-def number_file(request):
-    n = 10**request.param
-    fname = f'numbers-{n}.txt'
-    with open(fname, 'w') as fh:
-        for i in range(1, n+1):
-            print(i, file=fh)
-    yield fname, request.param
-    Path(fname).unlink()
-
-
-@pytest.fixture(scope="session")
-def primes_5000():
-    fname = 'primes-5000.txt'
-    with open(fname, 'w') as fh:
-        for i in get_init_primes(5000):
-            print(i, file=fh)
-    yield fname, 5000
-    Path(fname).unlink()
-
+def mock_get_approx(url):
+    parts = url.split('/')
+    start, stop = map(int, parts[-2:])
+    return JSONLen(prime_count(stop) - prime_count(start))
     
-@pytest.fixture
-def exact_prime_count():
-    return {1:4, 2:25, 3:168, 4:1229, 5:9592, 6:78_498}
+    
+def test_approx_large_range(monkeypatch):
+    # Check for approximate results for large result size
+    monkeypatch.setattr(requests, 'get', mock_get_approx)
+    primes = get_primes_between(100_000_000, 105_000_000)
+    at_least, at_most = 279_682, 338_416
+    assert at_least < len(primes) < at_most
 
-
-def test_true_prime_count(number_file, exact_prime_count):
-    fname, nlog = number_file
-    pnum = count_primes_in_file(fname)
-    assert exact_prime_count[nlog] == pnum.numerator
-
-
-def test_primes_are_likely_primes(primes_5000):
-    fname, count = primes_5000
-    pnum = count_primes_in_file(fname)
-    assert count == pnum.numerator
-
-
-def test_primality_randoms(randoms_uint64):
-    fname, n = randoms_uint64
-    if n != 10_000:
-        assert False, f"Distribution not checked for size {n}"
-    pnum = count_primes_in_file(fname)
-    assert 170 < pnum.numerator < 295

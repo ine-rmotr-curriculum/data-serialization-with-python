@@ -102,12 +102,7 @@ def MillerRabin(d: int, n: int) -> bool:
     # It is composite 
     return False
   
-# It returns false if n is  
-# composite and returns true if n 
-# is probably prime. k is an  
-# input parameter that determines 
-# accuracy level. Higher value of  
-# k indicates more accuracy. 
+
 def likely_prime(n: int, k: int=20) -> bool:
     """Test if a number is VERY LIKELY to be prime
     

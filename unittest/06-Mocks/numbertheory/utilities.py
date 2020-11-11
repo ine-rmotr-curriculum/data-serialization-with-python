@@ -2,6 +2,7 @@ from math import sqrt, log, nan
 from fractions import Fraction
 from collections import namedtuple
 from random import randint
+import requests
 
 Ratio = namedtuple("Ratio", "numerator denominator")
 
@@ -101,13 +102,8 @@ def MillerRabin(d: int, n: int) -> bool:
   
     # It is composite 
     return False
+
   
-# It returns false if n is  
-# composite and returns true if n 
-# is probably prime. k is an  
-# input parameter that determines 
-# accuracy level. Higher value of  
-# k indicates more accuracy. 
 def likely_prime(n: int, k: int=20) -> bool:
     """Test if a number is VERY LIKELY to be prime
     
@@ -178,3 +174,14 @@ def random_uint64_to_file(filename: str=None, count: int=10_000, _inc=[1]):
                     print(n, file=nums)
 
     return filename
+
+
+def get_primes_between(start=0, end=100):
+    "Find all primes in interval [start, end]"
+    assert start < end
+    url = f'http://example.org/primes-between/json/{start}/{end}'
+    response = requests.get(url)
+    return response.json()
+    
+    
+    
