@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://cdn.whatismybrowser.com/prod-website/static/main/css/site.min.css" rel="stylesheet" type="text/css"/>
+  <title>
+   What is my user agent? - WhatIsMyBrowser.com
+  </title>
+  <meta content="Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as." name="description"/>
+  <!-- Mobile meta tags -->
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <!-- Open Graph meta tags -->
+  <meta content="250309958422771" property="fb:app_id"/>
+  <meta content="100004242971350" property="fb:admins"/>
+  <meta content="WhatIsMyBrowser.com" property="og:site_name"/>
+  <meta content="Website" property="og:type"/>
+  <meta content="What is my user agent?" property="og:title"/>
+  <meta content="https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/open-graph-logo.png" property="og:image"/>
+  <meta content="Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as." property="og:description"/>
+  <meta content="https://www.whatismybrowser.com/detect/what-is-my-user-agent" property="og:url"/>
+  <!-- Twitter -->
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@whatismybrowser" name="twitter:site"/>
+  <meta content="@whatismybrowser" name="twitter:creator"/>
+  <meta content="What is my user agent?" name="twitter:title"/>
+  <meta content="Every request your web browser makes includes your User Agent; find out what your browser is sending and what this identifies your system as." name="twitter:description"/>
+  <!-- Favicon -->
+  <link href="https://cdn.whatismybrowser.com/prod-website/static/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/apple-touch-icon.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link href="https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/wimb-192.png" rel="icon" sizes="192x192"/>
+  <!-- Google -->
+  <meta content="0F0ECU9Mnc7O7bpIelLuldRYwQQr-ZzFDOmzesu1O24" name="google-site-verification"/>
+  <!-- Misc -->
+  <meta content="none" name="msapplication-config"/>
+  <!-- PWA -->
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="#36a1cf" name="theme-color"/>
+  <link href="/detect/what-is-my-user-agent" rel="canonical"/>
+  <!-- Translated versions -->
+  <link href="/detect/what-is-my-user-agent" hreflang="en" rel="alternate"/>
+  <link href="/fr/detect/what-is-my-user-agent" hreflang="fr" rel="alternate"/>
+  <link href="/de/detect/what-is-my-user-agent" hreflang="de" rel="alternate"/>
+  <link href="/es/detect/what-is-my-user-agent" hreflang="es" rel="alternate"/>
+  <link href="/pt/detect/what-is-my-user-agent" hreflang="pt" rel="alternate"/>
+  <!-- Google Analytics -->
+  <script>
+   var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21370927-1']);
+        _gaq.push(['_setDomainName', 'www.whatismybrowser.com']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+  </script>
+  <!-- Google AdSense -->
+  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+  </script>
+  <!-- Frontend language translation strings -->
+  <script>
+   var detect_yes = "Yes";
+            var detect_no = "No";
+            var detect_could_not_be_detected_javascript_disabled = "Could not be detected because Javascript is disabled";
+            var detection_blocked_by_browser = "Detection blocked by your web browser";
+            var detect_try_reloading = "Error. Try reloading.";
+            var please_wait = "Please wait...";
+            var detect_up_to_date = "Up to date";
+            var detect_out_of_date = "Out of date";
+            var detect_click_to_update = "Click to update";
+            var detect_not_installed_or_disabled = "Not installed, or disabled";
+
+            var detect_your_local_ip_manually = "Detect your local IP manually";
+            var detect_gmt_offset = "Browser GMT Offset";
+            var detect_pixel_ratio = "Device Pixel Ratio";
+            var detect_platform = "Navigator Platform";
+            var detect_oscpu = "OS / CPU";
+            var detect_vendor = "Vendor";
+            var detect_hardware_concurrency = "No. of logical CPU cores";
+            var detect_ram_gb = "RAM";
+            var detect_max_touch_points = "Maximum Touch Points";
+            var detect_webgl_vendor = "WebGL Vendor";
+            var detect_webgl_renderer = "WebGL Renderer";
+
+            var detect_addon_adblocker = "Ad blocker";
+            var detect_pixels = "Pixels";
+            var detect_bit = "bit";
+
+            var ubuc_copied_button = "URL copied";
+            var ubuc_copied_text = "Your unique URL has been copied to your clipboard. You can paste it into an email, tweet or ticket to your support desk.";
+            var ubuc_copy_problem_text = "There was a problem copying your unique URL to your clipboard. Manually copy and paste the link to your support desk.";
+  </script>
+ </head>
+ <body class="section_detect section_what-is-my-user-agent section_not_home monumetric_disabled monumetric_has_inscreen page_2col">
+  <nav aria-label="Heading and navigation" id="site">
+   <div id="top-logo-and-name">
+    <a href="/">
+     <img alt="" height="32" id="top-logo" src="https://cdn.whatismybrowser.com/prod-website/static/main/images/logo/logo-nav-white-32.png" width="32"/>
+    </a>
+    <h1 id="top-name">
+     <a href="/">
+      <span id="top-name-site">
+       WhatIsMyBrowser.com
+      </span>
+     </a>
+    </h1>
+   </div>
+   <ul id="main-nav">
+    <li class="search">
+     <a href="/search/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=top-nav">
+      Search
+     </a>
+    </li>
+    <li class="guides">
+     <a href="/guides/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=top-nav">
+      Guides
+     </a>
+    </li>
+    <li class="detect active">
+     <a href="/detect/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=top-nav">
+      Detect my settings
+     </a>
+    </li>
+    <li class="developers-tools">
+     <a href="/developers/tools/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=top-nav">
+      Tools
+     </a>
+    </li>
+   </ul>
+   <div id="account-action-buttons">
+    <a class="button button-filled-blue button-sign-up" href="https://developers.whatismybrowser.com" title="Sign up for our API">
+     Developers
+    </a>
+   </div>
+  </nav>
+  <div id="breadcrumbs">
+   <nav aria-label="Breadcrumb">
+    <ol typeof="BreadcrumbList" vocab="http://schema.org/">
+     <li property="itemListElement" typeof="ListItem">
+      <a href="/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=breadcrumbs" property="item" typeof="WebPage">
+       <span property="name">
+        Homepage
+       </span>
+      </a>
+      <meta content="1" property="position"/>
+     </li>
+     <li property="itemListElement" typeof="ListItem">
+      <a href="/detect/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=breadcrumbs" property="item" typeof="WebPage">
+       <span property="name">
+        Detect my settings
+       </span>
+      </a>
+      <meta content="2" property="position"/>
+     </li>
+     <li aria-current="page" class="current" property="itemListElement" typeof="ListItem">
+      <a href="/detect/what-is-my-user-agent?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=breadcrumbs" property="item" typeof="WebPage">
+       <span property="name">
+        What is my user agent?
+       </span>
+      </a>
+      <meta content="3" property="position"/>
+     </li>
+    </ol>
+   </nav>
+  </div>
+  <div id="content-base">
+   <div id="page-columns">
+    <section aria-label="Main content" id="content" role="main">
+     <h1>
+      What is my user agent?
+     </h1>
+     <h2>
+      Your User Agent is:
+     </h2>
+     <div class="detected_result">
+      <div class="value" id="detected_value">
+       <a href="https://developers.whatismybrowser.com/useragents/parse/?analyse-my-user-agent=yes">
+        python-requests/2.23.0
+       </a>
+      </div>
+     </div>
+     <p>
+      This page shows you what your web browser is sending in the "User-Agent" header for your HTTP requests. Want to know
+      <a href="/detect/what-http-headers-is-my-browser-sending">
+       what headers your browser is sending
+      </a>
+      ?
+     </p>
+     <h2>
+      What does all of that mean?!
+     </h2>
+     <p>
+      Each bit of your user agent indicates something particular about your system.
+     </p>
+     <p>
+      There's no "standard" way of writing a user agent string, so different web browsers use different formats (some are
+      <em>
+       wildly
+      </em>
+      different), and many web browsers cram loads of information into their user agents. That's where WhatIsMyBrowser.com steps in - we decode your user agent string to figure out everything it's saying.
+     </p>
+     <p>
+      Check out our
+      <a href="https://developers.whatismybrowser.com/useragents/parse/?analyse-my-user-agent=yes">
+       user agent analyser
+      </a>
+      page, which gives you a neat breakdown of all the things we can tell you about your browser and computer based on your user agent. We have a
+      <a href="https://developers.whatismybrowser.com/api/">
+       User Agent API
+      </a>
+      if you need to use the detection in your own system too.
+     </p>
+     <h2>
+      Can I change my user agent?
+     </h2>
+     <p>
+      It is possible to change or "fake" what your web browser sends as its user agent. Some mobile web browsers will let you change what the browser identifies itself as (ie "Mobile Mode" or "Desktop Mode") in order to access certain websites that only allow desktop computers. If you change this setting, the user agent is what is affected.
+     </p>
+     <h2>
+      What are some other user agent strings?
+     </h2>
+     <p>
+      If you'd like to see lots of other user agents that this site has been sent, check out our
+      <a href="https://developers.whatismybrowser.com/useragents/explore/">
+       User Agents
+      </a>
+      page.
+     </p>
+     <h3>
+      More questions?
+     </h3>
+     <p>
+      If you have any more questions, use the
+      <a href="/about/contact/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=detect-useragent">
+       contact form
+      </a>
+      and we'll answer it and add your question here.
+     </p>
+     <aside class="wimb-callout page-language-select">
+      <h1>
+       Read this page in a different language
+      </h1>
+      <ul>
+       <li class="">
+        <a href="/detect/what-is-my-user-agent">
+        </a>
+        English
+       </li>
+       <li class="">
+        <a href="/fr/detect/what-is-my-user-agent">
+        </a>
+        French
+       </li>
+       <li class="">
+        <a href="/de/detect/what-is-my-user-agent">
+        </a>
+        German
+       </li>
+       <li class="">
+        <a href="/es/detect/what-is-my-user-agent">
+        </a>
+        Spanish
+       </li>
+       <li class="">
+        <a href="/pt/detect/what-is-my-user-agent">
+        </a>
+        Portugese
+       </li>
+      </ul>
+     </aside>
+     <div class="feedback-form-link feedback-form-link-bottom">
+      <a href="#feedback-form" title="Do you have a suggestion for this page?">
+       Suggest Edit
+      </a>
+     </div>
+     <div class="clearer">
+     </div>
+     <aside id="feedback-form">
+      <h1>
+       Do you have a suggestion for this page?
+      </h1>
+      <p>
+       Is something wrong, missing, or out of date on this page?
+      </p>
+      <form action="#feedback-form" method="POST">
+       <textarea cols="40" id="id_feedback_message" name="feedback_message" placeholder="Type your feedback here." required="" rows="10">
+</textarea>
+       <div class="field_robotpreventer">
+        <input id="id_robotpreventer" name="robotpreventer" type="checkbox"/>
+        <label for="id_robotpreventer">
+         If you can see this checkbox, please leave it unchecked (it prevents robots abusing the system)
+        </label>
+       </div>
+       <p>
+        We read every bit of feedback and will gladly take whatever you have to say onboard with us. Suggestions are always welcome. If you didn't like something; please tell us why; we want to keep getting better.
+       </p>
+       <p>
+        Thanks for taking the time to let the team behind WhatIsMyBrowser.com know your thoughts.
+       </p>
+       <p>
+        <b>
+         This is NOT for tech support for the site you're using right now: whatismybrowser.com.
+        </b>
+        <br/>
+        We will read your suggestions and feedback but can't reply to you here. If you need a reply, use our contact form.
+       </p>
+       <div class="feedback-submit-button">
+        <input class="button" name="feedback" type="submit" value="Suggest Edit"/>
+       </div>
+       <div class="feedback-terms-conditions">
+        <a href="/about/legal/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=feedback-form">
+         Legal
+        </a>
+       </div>
+       <input name="csrfmiddlewaretoken" type="hidden" value="6zngcFJao0fF2ticFe4LyaUiRJn25KUX4EQeoaaS13b6Wocp2jbbFZ6fDOjprCgp"/>
+      </form>
+     </aside>
+    </section>
+    <section aria-label="The side column, contains extra links and advertising." id="extra">
+     <div class="fun fun-adsense fun-responsive">
+      <div class="fun-inner">
+       <!-- WIMB: Extra Column 01 -->
+       <ins class="adsbygoogle" data-ad-client="ca-pub-8548565564007782" data-ad-format="auto" data-ad-slot="5510985125" data-full-width-responsive="true" style="display:block">
+       </ins>
+       <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+      </div>
+      <div class="fun-info-footer">
+       Ads by Google
+      </div>
+     </div>
+     <div class="fun fun-adsense fun-responsive">
+      <div class="fun-inner">
+       <!-- WIMB: Extra Column 02 -->
+       <ins class="adsbygoogle" data-ad-client="ca-pub-8548565564007782" data-ad-format="auto" data-ad-slot="2818370829" data-full-width-responsive="true" style="display:block">
+       </ins>
+       <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+      </div>
+      <div class="fun-info-footer">
+       Ads by Google
+      </div>
+     </div>
+     <section class="link-group related-articles">
+      <h1>
+       <a href="/guides/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-h1">
+        Get help with our guides
+       </a>
+      </h1>
+      <ul>
+       <li>
+        <h2>
+         <a href="/guides/troubleshooting/website/cant-log-in?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-title">
+          I can't log in to a website.
+         </a>
+        </h2>
+        We've got a detailed guide to help you solve login problems
+        <a class="read-more" href="/guides/troubleshooting/website/cant-log-in?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-readmore">
+         Read more
+        </a>
+       </li>
+       <li>
+        <h2>
+         <a href="/guides/learn/cookies/why-do-websites-use-cookies?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-title">
+          Why do websites use cookies?
+         </a>
+        </h2>
+        Why are cookies useful? Do you need them?
+        <a class="read-more" href="/guides/learn/cookies/why-do-websites-use-cookies?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-readmore">
+         Read more
+        </a>
+       </li>
+       <li>
+        <h2>
+         <a href="/guides/how-to-update-your-browser/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-title">
+          How to update your browser
+         </a>
+        </h2>
+        Old software puts you at risk.
+        <a class="read-more" href="/guides/how-to-update-your-browser/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-readmore">
+         Read more
+        </a>
+       </li>
+       <li>
+        <h2>
+         <a href="/guides/how-to-clear-cookies-browsing-history-and-cache/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-title">
+          Clear Cache, Cookies and History
+         </a>
+        </h2>
+        How to reset your browsing history
+        <a class="read-more" href="/guides/how-to-clear-cookies-browsing-history-and-cache/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-readmore">
+         Read more
+        </a>
+       </li>
+       <li>
+        <h2>
+         <a href="/guides/how-to-try-a-different-web-browser?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-title">
+          Try a different web browser
+         </a>
+        </h2>
+        Different web browsers have different features - try a different one to see if you prefer it.
+        <a class="read-more" href="/guides/how-to-try-a-different-web-browser?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=related-articles&amp;utm_content=lg-readmore">
+         Read more
+        </a>
+       </li>
+       <li>
+        <h2>
+         <a href="https://go.nordvpn.net/aff_c?offer_id=252&amp;aff_id=8126&amp;url_id=1020" target="_blank">
+          Use a VPN to hide your IP address
+         </a>
+        </h2>
+        We recommend
+        <a href="https://nordvpn.com/what-is-a-vpn/" target="_blank">
+         NordVPN
+        </a>
+        to hide your IP address or to unblock websites.
+        <a class="read-more" href="https://go.nordvpn.net/aff_c?offer_id=252&amp;aff_id=8126&amp;url_id=1020" target="_blank">
+         Read more
+        </a>
+       </li>
+      </ul>
+     </section>
+    </section>
+   </div>
+  </div>
+  <footer aria-label="Page footer, contains various helpful links.">
+   <div class="main-columns">
+    <div class="col">
+     <h2>
+      <a href="/guides/">
+       Guides
+      </a>
+     </h2>
+     <ul>
+      <li>
+       <a href="/faq/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Frequently Asked Questions
+       </a>
+      </li>
+      <li>
+       <a href="/guides/how-to-enable-javascript/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        How to enable JavaScript
+       </a>
+      </li>
+      <li>
+       <a href="/guides/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Guides about the Internet
+       </a>
+      </li>
+      <li>
+       <a href="/guides/learn/web-browsers/why-should-i-update-my-web-browser?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Why update my browser?
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="col">
+     <h2>
+      <a href="/developers/tools/">
+       Tools
+      </a>
+     </h2>
+     <ul>
+      <li>
+       <a href="/developers/tools/iframe?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Use our IFrame on your site
+       </a>
+      </li>
+      <li>
+       <a href="https://developers.whatismybrowser.com/useragents/parse/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        User agent parser
+       </a>
+      </li>
+      <li>
+       <a href="/developers/tools/send-to-tech-help?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Send browser info via email
+       </a>
+      </li>
+      <li>
+       <a href="/minimum-system-requirements/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Minimum System Requirements
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="col">
+     <h2>
+      <a href="https://developers.whatismybrowser.com/">
+       Developers
+      </a>
+     </h2>
+     <ul>
+      <li>
+       <a href="/guides/the-latest-user-agent/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Latest user agents
+       </a>
+      </li>
+      <li>
+       <a href="https://developers.whatismybrowser.com/api/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        User Agent Parsing API
+       </a>
+      </li>
+      <li>
+       <a href="https://developers.whatismybrowser.com/useragents/explore/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Explore User Agents
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="col">
+     <h2>
+      Connect
+     </h2>
+     <ul>
+      <li>
+       <a href="/about/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="/about/contact/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Contact Us
+       </a>
+      </li>
+      <li>
+       <a href="https://twitter.com/whatismybrowser">
+        @whatismybrowser
+       </a>
+      </li>
+      <li>
+       <a href="/about/media/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+        Media / Press Kit
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <section class="network-links">
+    <h2>
+     Connect with us
+    </h2>
+    <div>
+     <a href="https://twitter.com/whatismybrowser">
+      Twitter
+     </a>
+     <a href="https://www.instagram.com/whatismybrowser">
+      Instagram
+     </a>
+     <a href="https://www.facebook.com/whatismybrowser">
+      Facebook
+     </a>
+     <a href="https://pinterest.com/whatismybrowser">
+      Pinterest
+     </a>
+     <a href="https://github.com/whatismybrowser">
+      Github
+     </a>
+     <a href="https://www.patreon.com/whatismybrowser">
+      Patreon
+     </a>
+     <a href="https://www.producthunt.com/posts/whatismybrowser-com">
+      ProductHunt
+     </a>
+    </div>
+   </section>
+   <section class="choose-language">
+    <h2>
+     Choose language
+    </h2>
+    <p>
+     We are starting to internationalise the site, please select a language
+    </p>
+    <aside class="wimb-callout page-language-select">
+     <h1>
+      Read this page in a different language
+     </h1>
+     <ul>
+      <li class="">
+       <a href="/detect/what-is-my-user-agent">
+       </a>
+       English
+      </li>
+      <li class="">
+       <a href="/fr/detect/what-is-my-user-agent">
+       </a>
+       French
+      </li>
+      <li class="">
+       <a href="/de/detect/what-is-my-user-agent">
+       </a>
+       German
+      </li>
+      <li class="">
+       <a href="/es/detect/what-is-my-user-agent">
+       </a>
+       Spanish
+      </li>
+      <li class="">
+       <a href="/pt/detect/what-is-my-user-agent">
+       </a>
+       Portugese
+      </li>
+     </ul>
+    </aside>
+    <ul id="translation-options">
+     <li>
+      <a href="/">
+       What is my browser?
+      </a>
+     </li>
+     <li>
+      <a href="/fr/">
+       Quel est mon navigateur?
+      </a>
+     </li>
+     <li>
+      <a href="/de/">
+       Was ist mein Browser?
+      </a>
+     </li>
+     <li>
+      <a href="/es/">
+       ¿Cual es mi navegador?
+      </a>
+     </li>
+     <li>
+      <a href="/pt/">
+       Qual é o meu navegador?
+      </a>
+     </li>
+    </ul>
+    <p>
+     If you have any feedback or corrections, please let us know.
+    </p>
+   </section>
+   <div class="info">
+    <a href="/about/accessibility?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+     Accessibility Statement
+    </a>
+   </div>
+   <div class="legal">
+    <a href="/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+     WhatIsMyBrowser.com
+    </a>
+    © 2010 - 2020.
+    <a href="/about/legal/?utm_source=whatismybrowsercom&amp;utm_medium=internal&amp;utm_campaign=footer">
+     Legal
+    </a>
+    <br/>
+   </div>
+  </footer>
+  <script>
+   var third_party_domain = "webbrowsertests.com"; // which server do third-party checks use?
+  </script>
+  <script defer="" src="https://cdn.whatismybrowser.com/prod-website/static/main/js/site.min.js">
+  </script>
+  <script>
+   // -- if javascript is enabled, hide the form.
+            var feedback_form = document.getElementById("feedback-form");
+            if (typeof(feedback_form) !== undefined) {
+                feedback_form.style.display="none";
+            }
+
+            // -- for every feedback form link, add click handler to show the form
+            document.querySelectorAll('.feedback-form-link a').forEach(item => {
+              item.addEventListener('click', event => {
+                var feedback_form = document.getElementById("feedback-form");
+                if (typeof(feedback_form) !== undefined) {
+                    feedback_form.style.display="block";
+                }
+
+                // -- when they've clicked one of the edit buttons, hide them all.
+                document.querySelectorAll('.feedback-form-link').forEach(edit_holder => {
+                    edit_holder.style.display="none";
+                });
+              })
+            })
+  </script>
+ </body>
+</html>
+

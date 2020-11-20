@@ -24,6 +24,7 @@ dependencies:
     - pytest-xdist
     - bs4
     - scrapy
+    - selenium
     - pip:
         - csvkit
         - html5lib
