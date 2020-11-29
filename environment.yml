@@ -28,3 +28,7 @@ dependencies:
     - pip:
         - csvkit
         - html5lib
+        - asyncpg
+        - pg8000
+        - aiopg
+        - nest_asyncio

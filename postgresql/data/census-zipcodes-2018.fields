@@ -1,0 +1,8 @@
+USPS	United States Postal Service State Abbreviation
+GEOID	Geographic Identifier - fully concatenated geographic code (State FIPS and district number)
+ALAND	Land Area (square meters) - Created for statistical purposes only
+AWATER	Water Area (square meters) - Created for statistical purposes only
+ALAND_SQMI	Land Area (square miles) - Created for statistical purposes only
+AWATER_SQMI	Water Area (square miles) - Created for statistical purposes only
+INTPTLAT	Latitude (decimal degrees) First character is blank or "-" denoting North or South latitude respectively
+INTPTLONG	Longitude (decimal degrees) First character is blank or "-" denoting East or West longitude respectively

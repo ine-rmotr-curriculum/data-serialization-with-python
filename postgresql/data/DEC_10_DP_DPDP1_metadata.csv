@@ -1,0 +1,53 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_S001,Number; SEX AND AGE - Total population
+HD01_S020,Number; SEX AND AGE - Total population - Median age (years)
+HD01_S076,Number; RACE - Total population
+HD01_S095,Number; RACE - Total population - Two or More Races
+HD01_S099,Number; RACE - Total population - Two or More Races - White; Some Other Race [3]
+HD01_S100,Number; RACE - Race alone or in combination with one or more other races: [4] - White
+HD01_S101,Number; RACE - Race alone or in combination with one or more other races: [4] - Black or African American
+HD01_S102,Number; RACE - Race alone or in combination with one or more other races: [4] - American Indian and Alaska Native
+HD01_S103,Number; RACE - Race alone or in combination with one or more other races: [4] - Asian
+HD01_S104,Number; RACE - Race alone or in combination with one or more other races: [4] - Native Hawaiian and Other Pacific Islander
+HD01_S105,Number; RACE - Race alone or in combination with one or more other races: [4] - Some Other Race
+HD01_S106,Number; HISPANIC OR LATINO - Total population
+HD01_S107,Number; HISPANIC OR LATINO - Total population - Hispanic or Latino (of any race)
+HD01_S112,Number; HISPANIC OR LATINO - Total population - Not Hispanic or Latino
+HD01_S130,Number; RELATIONSHIP - Total population
+HD01_S131,Number; RELATIONSHIP - Total population - In households
+HD01_S134,Number; RELATIONSHIP - Total population - In households - Child
+HD01_S136,Number; RELATIONSHIP - Total population - In households - Other relatives
+HD01_S138,Number; RELATIONSHIP - Total population - In households - Other relatives - 65 years and over
+HD01_S139,Number; RELATIONSHIP - Total population - In households - Nonrelatives
+HD01_S142,Number; RELATIONSHIP - Total population - In households - Nonrelatives - Unmarried partner
+HD01_S143,Number; RELATIONSHIP - Total population - In group quarters
+HD01_S144,Number; RELATIONSHIP - Total population - In group quarters - Institutionalized population
+HD01_S146,Number; RELATIONSHIP - Total population - In group quarters - Institutionalized population - Female
+HD01_S147,Number; RELATIONSHIP - Total population - In group quarters - Noninstitutionalized population
+HD01_S149,Number; RELATIONSHIP - Total population - In group quarters - Noninstitutionalized population - Female
+HD01_S150,Number; HOUSEHOLDS BY TYPE - Total households
+HD01_S151,Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7]
+HD01_S153,Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Husband-wife family
+HD01_S154,Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Husband-wife family - With own children under 18 years
+HD01_S155,"Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Male householder, no wife present"
+HD01_S156,"Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Male householder, no wife present - With own children under 18 years"
+HD01_S157,"Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Female householder, no husband present"
+HD01_S158,"Number; HOUSEHOLDS BY TYPE - Total households - Family households (families) [7] - Female householder, no husband present - With own children under 18 years"
+HD01_S159,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7]
+HD01_S160,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7] - Householder living alone
+HD01_S161,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7] - Householder living alone - Male
+HD01_S162,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7] - Householder living alone - Male - 65 years and over
+HD01_S163,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7] - Householder living alone - Female
+HD01_S164,Number; HOUSEHOLDS BY TYPE - Total households - Nonfamily households [7] - Householder living alone - Female - 65 years and over
+HD01_S167,Number; HOUSEHOLDS BY TYPE - Total households - Average household size
+HD01_S168,Number; HOUSEHOLDS BY TYPE - Total households - Average family size [7]
+HD01_S169,Number; HOUSING OCCUPANCY - Total housing units
+HD01_S171,Number; HOUSING OCCUPANCY - Total housing units - Vacant housing units
+HD01_S177,Number; HOUSING OCCUPANCY - Total housing units - Vacant housing units - All other vacants
+HD01_S180,Number; HOUSING TENURE - Occupied housing units
+HD01_S181,Number; HOUSING TENURE - Occupied housing units - Owner-occupied housing units
+HD01_S183,Number; HOUSING TENURE - Occupied housing units - Owner-occupied housing units - Average household size of owner-occupied units
+HD01_S184,Number; HOUSING TENURE - Occupied housing units - Renter-occupied housing units
+HD01_S186,Number; HOUSING TENURE - Occupied housing units - Renter-occupied housing units - Average household size of renter-occupied units
