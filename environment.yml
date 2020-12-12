@@ -25,6 +25,7 @@ dependencies:
     - bs4
     - scrapy
     - selenium
+    - tabulate
     - pip:
         - csvkit
         - html5lib
@@ -32,3 +33,4 @@ dependencies:
         - pg8000
         - aiopg
         - nest_asyncio
+        - bash_kernel
