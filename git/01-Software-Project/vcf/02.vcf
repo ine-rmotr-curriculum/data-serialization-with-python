@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:A.E. Robinson Oil and Propane
+N:Oil and Propane;A.E. Robinson;;;
+item1.EMAIL;TYPE=INTERNET:mdami@aerobinson.com
+item1.X-ABLabel:
+TEL;TYPE=WORK:1-555-555-5555
+item3.ORG:A.E. Robinson
+item3.X-ABLabel:
+CATEGORIES:myContacts,business
+END:VCARD
+

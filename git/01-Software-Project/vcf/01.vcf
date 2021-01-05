@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:A-1 Phoenix Performance Auto
+N:Auto;A-1 Phoenix;Performance;;
+TEL;TYPE=WORK:1-555-555-5555
+ADR;TYPE=HOME:;;7950 Beverly Blvd;Los Angeles;CA;90048;;7950 Beverly Blvd\n
+ Los Angeles CA 90048
+item1.URL:http\://a1performanceautobody.com
+item1.X-ABLabel:PROFILE
+CATEGORIES:myContacts,business
+END:VCARD
+
