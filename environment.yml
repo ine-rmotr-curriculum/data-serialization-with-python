@@ -26,6 +26,7 @@ dependencies:
     - scrapy
     - selenium
     - tabulate
+    - mysql-connector-python
     - pip:
         - csvkit
         - html5lib
@@ -34,3 +35,4 @@ dependencies:
         - aiopg
         - nest_asyncio
         - bash_kernel
+        - PyMySQL[rsa]
