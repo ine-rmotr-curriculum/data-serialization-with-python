@@ -2,6 +2,7 @@
 **/tmp/*
 tmp-*
 *.enc
+**/Fractal/*.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

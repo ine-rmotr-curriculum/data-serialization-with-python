@@ -1,0 +1,3 @@
+[submodule "softwaredev/Fractal"]
+	path = softwaredev/Fractal
+	url = https://github.com/INE-Student/Fractal
