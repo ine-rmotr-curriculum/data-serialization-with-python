@@ -1,3 +1,8 @@
+try:
+    from numba import njit
+except ImportError:
+    njit = lambda f: f
+    
 def mandelbrot(z0:complex, orbits:int=255) -> int:
     """Find the escape orbit of points under Mandelbrot iteration
 
@@ -27,3 +32,5 @@ def mandelbrot(z0:complex, orbits:int=255) -> int:
             return n
         z = z * z + z0
     return orbits
+
+fast_mandelbrot = njit(mandelbrot)

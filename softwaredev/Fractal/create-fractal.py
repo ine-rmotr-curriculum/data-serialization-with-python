@@ -31,17 +31,19 @@ def generate(args):
     data = make_canvas(args.fn, args.xcenter, args.ycenter,
                            args.size, args.pixels)
     # Rescale to 0-255 as uint8
-    min, max = data.min(), data.max()
+    min, max = data.min().astype(float), data.max()
     rescaled = (255 * (data-min)/max).astype(np.uint8)
     im = Image.fromarray(rescaled)
     return im
 
 
-if __name__ == '__main__':
-    args = config()
-    args.fn = eval(args.kind)
+def main():
     fname = f"{args.kind}_{args.xcenter}_{args.ycenter}_{args.size}.png"
     im = generate(args)
     im.save(fname)
     print(f"Saved fractal image {fname}")
 
+if __name__ == '__main__':
+    args = config()
+    args.fn = eval(args.kind)
+    main()
