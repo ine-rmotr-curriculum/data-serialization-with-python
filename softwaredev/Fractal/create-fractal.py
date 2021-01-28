@@ -5,12 +5,13 @@ from argparse import ArgumentParser
 import sys
 from PIL import Image
 import numpy as np
-from fractal.julia import julia
+from fractal.mandelbrot import mandelbrot, fast_mandelbrot
+from fractal.julia import julia, fast_julia
 from fractal.sierpiński import gasket, carpet
-from fractal.mandelbrot import mandelbrot
 from fractal.koch import snowflake
 from fractal.visualize import make_canvas
-
+import code
+from textwrap import dedent
 
 def config(argv=sys.argv[1:]):
     parser = ArgumentParser(description='Create a PNG of a fractal')
@@ -24,6 +25,10 @@ def config(argv=sys.argv[1:]):
                         help="Numeric range of values to plot")
     parser.add_argument('-p', '--pixels', type=int, default=800,
                         help="Size of generated graph")
+    parser.add_argument('--trace', action="store_true", default=False,
+                        help="Trace the fractal generation")
+    parser.add_argument('--custom', action="store_true", default=False,
+                        help="Define a custom fractal function")
     return parser.parse_args(argv)
 
 
@@ -37,13 +42,49 @@ def generate(args):
     return im
 
 
-def main():
+def main(args):
     fname = f"{args.kind}_{args.xcenter}_{args.ycenter}_{args.size}.png"
     im = generate(args)
     im.save(fname)
-    print(f"Saved fractal image {fname}")
+    print(f"Saved fractal image {fname}", file=sys.stderr)
+
+def trace(args):
+    import trace
+
+    # create a Trace object, telling it what to ignore, and whether to
+    # do tracing or line-counting or both.
+    tracer = trace.Trace(
+            ignoredirs=[sys.prefix, sys.exec_prefix],
+            trace=False, count=True)
+
+    # run the new command using the given tracer
+    tracer.run('main(args)')
+
+    # make a report, placing output in the current directory
+    r = tracer.results()
+    r.write_results(show_missing=True, coverdir="coverage")
+
 
 if __name__ == '__main__':
     args = config()
+
+    if args.custom:
+        sys.ps1 = "fractal> "
+        sys.ps2 = "     ... "
+        banner = dedent("""
+        ┌────────────────────────────────────────────────────────────────────┐
+        │ *** Define a custom ℂ🠖ℕ function named 'fractal()' ***             │
+        │ You may inspect or modify the command-line parameters 'args'       │
+        │ ... when complete, press Ctrl-D to save function and exit          │
+        └────────────────────────────────────────────────────────────────────┘
+        """)
+        exitmsg = "--- Using function 'fractal()' to generate image ---"
+        args.kind = "fractal"
+        code.interact(banner=banner, local=globals(), exitmsg=exitmsg)
+
     args.fn = eval(args.kind)
-    main()
+    if args.trace:
+        trace(args)
+    else:
+        main(args)
+
