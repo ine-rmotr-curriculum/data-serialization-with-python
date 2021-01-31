@@ -6,7 +6,7 @@ is dramatically inefficient.  Creating an entire canvas is more direct
 import numpy as np
 from itertools import product
 
-def gasket(pixels=3**6, N=5):
+def gasket(pixels:int=3**6, N:int=5) -> np.ndarray:
     """Draw a Sierpiński gasket of `N` iterations on canvas of size `pixels`
     
     More than 255 iterations are not be legible, and are not allowed.
@@ -39,7 +39,7 @@ def gasket(pixels=3**6, N=5):
     return canvas
 
 
-def carpet(pixels=800, N=5):
+def carpet(pixels:int=800, N:int=5) -> np.ndarray:
     """Draw a Sierpiński carpet of `N` iterations on canvas of size `pixels`
     
     More than 255 iterations are not be legible, and are not allowed.

@@ -1,3 +1,4 @@
+from __future__ import annotations
 try:
     from numba import njit
 except ImportError:

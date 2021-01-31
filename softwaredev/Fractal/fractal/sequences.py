@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def scatter(seq1, seq2, pixels=800, ncolor=16):
+def scatter(seq1, seq2, /, pixels=800, *, ncolor=16):
     canvas = np.zeros(shape=(pixels, pixels), dtype=np.uint8)
     color = 1   
     while True:
