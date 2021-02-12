@@ -16,8 +16,8 @@ Python provides a number of advanced constructs that can make the language more 
 
 * Writing generator functions
   * Understand the iterator protocol
+  * Write class-based versions of iterators  
   * Use yield and yield from
-  * Write class-based versions of iterators
 * The itertools modules
   * Combine lazy iterator streams
   * Describe infinite/unbounded operations
