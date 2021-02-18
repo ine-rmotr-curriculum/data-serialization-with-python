@@ -1,0 +1,13 @@
+digraph {
+    graph [ dpi = 2200 ]
+    A -> B
+    A -> F 
+    F -> C
+    F -> I
+    B -> D 
+    B -> E 
+    E -> G
+    E -> H
+    H -> J
+    H -> K
+}
