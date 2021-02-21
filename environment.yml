@@ -27,6 +27,7 @@ dependencies:
     - selenium
     - tabulate
     - mysql-connector-python
+    - more-itertools
     - pip:
         - csvkit
         - html5lib
