@@ -4,6 +4,7 @@ tmp-*
 *.enc
 **/Fractal/*.png
 **/kdm
+**/scratch
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

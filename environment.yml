@@ -1,6 +1,5 @@
 name: INE
 channels:
-    - intel
     - conda-forge
 dependencies:
     - python=3.8
@@ -28,6 +27,7 @@ dependencies:
     - tabulate
     - mysql-connector-python
     - more-itertools
+    - scikit-learn
     - pip:
         - csvkit
         - html5lib
@@ -37,3 +37,4 @@ dependencies:
         - nest_asyncio
         - bash_kernel
         - PyMySQL[rsa]
+        - striprtf
