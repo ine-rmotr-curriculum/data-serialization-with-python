@@ -38,7 +38,7 @@ def login():
 @app.route('/get-info')
 def get_info():
     username = request.cookies.get('app1-username')
-    token = request.cookies.get('app1-token') or object()
+    token = request.cookies.get('app1-token', object())
     if token != auth_tokens.get(username):
         return make_response(f"{username} denied access to resource", 403)
     
