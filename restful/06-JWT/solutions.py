@@ -25,15 +25,15 @@ def login():
         jwt.decode(request.data, pubkey, algorithm="RS256")
         nbf = datetime.utcnow() + timedelta(seconds=10)
         exp = datetime.utcnow() + timedelta(seconds=30)
-        
-        token = jwt.encode({'nbf': nbf, 'exp': exp}, 
+
+        token = jwt.encode({'nbf': nbf, 'exp': exp},
                            server2_private_key, algorithm="RS256")
         resp = make_response(token)
         resp.mimetype = "application/jwt"
         return resp
     except Exception as err:
         return make_response(str(err), 403)
-    
+
 @app.route('/', methods=['POST'])
 def q():
     # Have I received a valid token I issues?
@@ -43,6 +43,6 @@ def q():
         return make_response(zen.lines[-1])
     except Exception as err:
         return make_response(str(err), 403)
-         
+
 if __name__ == "__main__":
     app.run(port=5025)
