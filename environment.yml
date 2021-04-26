@@ -28,6 +28,7 @@ dependencies:
     - mysql-connector-python
     - more-itertools
     - scikit-learn
+    - nbdime
     - pip:
         - csvkit
         - html5lib
