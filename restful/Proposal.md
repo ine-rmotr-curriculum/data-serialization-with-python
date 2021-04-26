@@ -2,23 +2,12 @@
 
 ## Syllabus
 
-1. RESTful Web Services
-   1. Understand stateless and “cloud native” services
-   2. Create simple (unsecured) service using Flask
-   3. Access web service with varying serialization formats
-2. Using JSON Web Tokens
-   1. Initial authentication
-   2. Composing signed requests
-   3. Validating requests
-3. HTTP Signatures
-   1. Initial authentication
-   2. Composing signed requests
-   3. Validating requests
-4. GitHub Projects (Jupyter Notebooks)
-   1. Create a web service with multiple serialization options
-   2. Add JSON Web Tokens to your web service
-   3. Add HTTP Signatures to your web service
-
+1. Stateless web services
+2. Micro-service architecture
+3. MIME formats
+3. TLS encryption
+4. Agent authentication
+5. JSON web tokens
 
 ## WHAT’S NOT INCLUDED
 
