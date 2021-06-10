@@ -1,6 +1,6 @@
 Preparing
 
-1. `cd ~/git/git-INE`
+1. `cd ~/git/git-INE/Fractal`
 1. `docker build . -t ine.git`
 1. `docker run -it ine.git bash`
 
