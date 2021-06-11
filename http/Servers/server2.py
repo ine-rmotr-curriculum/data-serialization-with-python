@@ -43,19 +43,19 @@ def sum_csv():
 @app.route('/form', methods=["PUT", "POST"])
 def form():
     html = f"""
-        <html>
-          <head>
-            <title>INE Student Summary</title>
-          </head>
-          <body>
-            <h3>HTTP using Python</h3>
-            <dl>
-              <dt>Name</dt><dd>{request.form['name']}</dd>
-              <dt>Favorite Color</dt><dd>{request.form['color']}</dd>
-              <dt>Birthday</dt><dd>{request.form['bday']}</dd>
-            </dl>
-          </body>
-        </html>
+      <html>
+        <head>
+          <title>INE Student Summary</title>
+        </head>
+        <body>
+          <h3>HTTP using Python</h3>
+          <dl>
+            <dt>Name</dt><dd>{request.form['name']}</dd>
+            <dt>Favorite Color</dt><dd>{request.form['color']}</dd>
+            <dt>Birthday</dt><dd>{request.form['bday']}</dd>
+          </dl>
+        </body>
+      </html>
     """
     return make_response(html)
 

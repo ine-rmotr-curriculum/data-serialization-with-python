@@ -4,18 +4,19 @@ from flask import Flask, request, make_response, Response, stream_with_context
 app = Flask(__name__)
 
 @app.route('/greeting')
-def root():
+def greeting():
     lang = request.args.get('lang', 'en')
     greet = {'en': 'Hello', 'zh': 'Nǐn hǎo', 'fr': 'Bonjour'}[lang]
     who = request.headers.get('X-INE-Student', 'Student')
-    page = f"""<html>
-  <head>
-    <title>Test Page</title>
-  </head>
-  <body>
-    <p>{greet} {who}!</p>
-  </body>
-</html>
+    page = f"""
+      <html>
+        <head>
+          <title>Test Page</title>
+        </head>
+        <body>
+          <p>{greet} {who}!</p>
+        </body>
+      </html>
     """
     resp = make_response(page)
     resp.mimetype = 'text/html'
