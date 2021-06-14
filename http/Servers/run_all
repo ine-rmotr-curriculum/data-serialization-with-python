@@ -1,0 +1,7 @@
+#!/bin/bash
+./server1.py &
+./server2.py &
+./server3.sh &
+./server4.py &
+./server5.py &
+

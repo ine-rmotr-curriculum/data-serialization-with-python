@@ -27,7 +27,7 @@ def data():
 
 
 @app.route('/redirect')
-def to_gnosis():
+def to_kdm():
     return redirect("http://kdm.training", code=301)
 
 
