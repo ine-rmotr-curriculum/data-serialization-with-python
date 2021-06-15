@@ -9,7 +9,7 @@ from time import sleep
 from flask import Flask, jsonify, request, Response
 
 app = Flask(__name__)
-port = 2551
+port = 2552
 
 greetings = Path('greetings.txt').read_text().splitlines()
 names = Path('names.txt').read_text().splitlines()
@@ -21,7 +21,7 @@ def streamed_response():
             greet = choice(greetings)
             name = choice(names)
             yield f"{greet} {name}!"
-            sleep(0.5+random())
+            sleep(random())
     return Response(generate(), mimetype='text/plain')         
 
 @app.route('/json', methods=["PUT", "POST"])
